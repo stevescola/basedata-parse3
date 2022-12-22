@@ -1,0 +1,46 @@
+Article Meta Data Dictionary
+
+"article_id": " " {
+	"article_title": " ",
+	"article_parent_id": " ",
+	"article_revisions": {
+		"{combination the article_id and wv_revision_id}": {
+			"wv_revision_id": " ",
+			"revision_timestmap": " "
+		}
+	}
+}
+
+
+Locale Header Data Dictionary
+
+"article_id": " " {
+	"article_title": " ",
+	"locale_type": " ",							// options: ["continent", "region", "city", "district", "park", "xxx"]
+	"article_rating": " ",						// options: ["outline", "usable", "guide"]; this will change as the article is improved
+	"is_part_of": "{parent article_id}",		// currently extract article title of the parent
+	"locale_geo": {
+		"locale_lat": " ",
+		"locale_long": " "
+	}
+}
+
+Article Section Availability Dictionary
+This can be a subset of or derived from the Article Meta Data Dictionary.
+
+"article-revision_id": " " {
+	"article_title": " ",
+	"article_rating": " ",
+	"article_sections": {
+		"h2_section": {
+			"h2_section_name": " ",
+			"h2_is_available": true,				// will provide a total list of possible H2 sections
+			"h2_section_uri": " ",		
+			"h3_sections": {						// This will be zero or multiple instances of H3 level sections
+				"h3_section_name": " ",
+				"h3_is_available": true,			// will provide a total list of possible H3 sections
+				"h3_section_uri": " ",
+			}
+		}
+	}
+} 
