@@ -18,3 +18,17 @@ def extract_locale_header_data(...):
 
 return ...
 
+    """
+    SCHEMA
+
+    "article_id": " " {								// as int?
+        "article_title": " ",
+        "locale_type": " ",							// options: ["continent", "region", "city", "district", "park", "airport"]
+        "article_rating": " ",						// options: ["outline", "usable", "guide"]; this will change as the article is improved
+        "is_part_of": " ",							// currently extract article title of the parent
+        "locale_geo": {
+            "locale_lat": " ",
+            "locale_long": " "
+        }
+    }
+    """
